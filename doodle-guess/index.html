@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doodle Guess</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2c3e50;
+      --primary-dark: #1a252f;
+      --bg: #27ae60;
+      --white: #ffffff;
+      --text: #ffffff;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      overflow: hidden;
+      font-family: 'Outfit', sans-serif;
+      color: var(--text);
+    }
+
+    #app {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    canvas {
+      filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.2));
+    }
+
+    #guess-input {
+      position: fixed;
+      bottom: 25px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 15px 30px;
+      font-size: 20px;
+      border-radius: 40px;
+      border: 4px solid var(--white);
+      outline: none;
+      width: 320px;
+      box-shadow: var(--shadow);
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      color: #000;
+      background: rgba(255, 255, 255, 0.95);
+      z-index: 1000;
+    }
+
+    #guess-input:focus {
+      width: 400px;
+      background: var(--white);
+      transform: translateX(-50%) translateY(-5px);
+    }
+
+    .hidden {
+      display: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app"></div>
+  <input type="text" id="guess-input" class="hidden" placeholder="Type your guess here..." autocomplete="off">
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

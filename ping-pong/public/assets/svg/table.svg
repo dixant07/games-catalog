@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1600" width="900" height="1600">
+  <defs>
+    <linearGradient id="greenGrad" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#7fd64a"/>
+      <stop offset="1" stop-color="#6fc23e"/>
+    </linearGradient>
+
+    <!-- clip so the central stripe only appears inside the two green panels -->
+    <clipPath id="panelClips">
+      <rect x="40" y="40" width="820" height="740" rx="4"/>
+      <rect x="40" y="820" width="820" height="740" rx="4"/>
+    </clipPath>
+  </defs>
+
+  <!-- background frame -->
+  <rect x="0" y="0" width="900" height="1600" fill="#060606"/>
+
+  <!-- top playing area (stroke preserved on top so its border stays visible) -->
+  <rect x="40" y="40" width="820" height="740" rx="4" fill="url(#greenGrad)" stroke="#0a0a0a" stroke-width="2"/>
+
+  <!-- bottom playing area -->
+  <rect x="40" y="820" width="820" height="740" rx="4" fill="url(#greenGrad)" stroke="#0a0a0a" stroke-width="2"/>
+
+  <!-- central stripe painted BEFORE the horizontal divider but clipped to green panels so it won't overlap outer black margins -->
+  <g clip-path="url(#panelClips)">
+    <rect x="430" y="40" width="40" height="1560" rx="2" fill="#f7f7f7"/>
+    <rect x="428" y="40" width="2" height="1560" fill="#d3d3d3" opacity="0.25"/>
+    <rect x="472" y="40" width="2" height="1560" fill="#d3d3d3" opacity="0.25"/>
+  </g>
+
+  <!-- horizontal divider / net (drawn last so it visually sits above the stripe in the center) -->
+  <rect x="40" y="780" width="820" height="40" fill="#0b0b0b"/>
+  <rect x="40" y="795" width="820" height="10" fill="#f7f7f7"/>
+
+  <!-- subtle inner strokes -->
+  <rect x="44" y="44" width="812" height="732" rx="2" fill="none" stroke="#0b0b0b" stroke-width="1" opacity="0.25"/>
+  <rect x="44" y="824" width="812" height="732" rx="2" fill="none" stroke="#0b0b0b" stroke-width="1" opacity="0.25"/>
+</svg>
