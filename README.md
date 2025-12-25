@@ -46,3 +46,9 @@ The server will pair the first two connected clients and forward their signaling
 ## Troubleshooting
 - If ports are busy, change the Vite port via `vite.config.js` or run with `npm run dev -- --port <port>`.
 - Clear browser localStorage if tabs fail to discover each other during local multiplayer testing.
+
+
+## Referece for Replicating Games with thier Assets and Physics
+- 2 Player Games (Android): [https://play.google.com/store/apps/details?id=com.JindoBlu.TwoPlayerGamesChallenge&hl=en_IN]
+- Crazygames (Web): [https://www.crazygames.com/]
+- GameSnacks (web): [https://gamesnacks.com/]
