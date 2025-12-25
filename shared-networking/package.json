@@ -1,0 +1,16 @@
+{
+  "name": "local-matchmaking-server",
+  "version": "1.0.0",
+  "description": "Simple WebSocket server for local game matchmaking",
+  "main": "local-server.js",
+  "scripts": {
+    "start": "node local-server.js",
+    "dev": "node local-server.js"
+  },
+  "dependencies": {
+    "ws": "^8.14.2"
+  },
+  "keywords": ["websocket", "matchmaking", "local", "games"],
+  "author": "Local Development",
+  "license": "MIT"
+}
